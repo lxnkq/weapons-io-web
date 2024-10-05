@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salsa.io</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <h2>Loading...</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Welcome to Salsa.io</h1>
+        </header>
+        <div id="auth-container">
+            <h2>Sign Up / Login</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="signup-btn">Sign Up</button>
+            <button id="login-btn">Login</button>
+            <p id="auth-message"></p>
+        </div>
+        <section>
+            <h3>Choose Your Rank Emoji:</h3>
+            <div class="emoji-selection">
+                <img src="images/star.png" alt="Star" data-emoji="⭐" class="emoji">
+                <img src="images/star2.png" alt="Star 2" data-emoji="🌟" class="emoji">
+                <img src="images/fire.png" alt="Fire" data-emoji="🔥" class="emoji">
+                <img src="images/skull.png" alt="Skull" data-emoji="💀" class="emoji">
+                <img src="images/crown.png" alt="Crown" data-emoji="👑" class="emoji">
+            </div>
+            <button id="apply-rank">Apply</button>
+            <div class="rank-emojis">
+                <h3>Your Rank: <span id="rank-emoji">⭐</span></h3>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
