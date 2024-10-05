@@ -1,0 +1,93 @@
+/* Loader styling */
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-content h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Main content styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#auth-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#auth-container input {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.emoji-selection {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.emoji {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.rank-emojis {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    .rank-emojis {
+        margin-top: 20px;
+    }
+    h1, h2 {
+        font-size: 18px;
+    }
+    .spinner {
+        width: 30px;
+        height: 30px;
+    }
+}
