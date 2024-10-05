@@ -1,5 +1,5 @@
 // Firebase configuration
-const firebaseConfig = {
+const FireBaseConfig = {
     apiKey: "YOUR_API_KEY",
     authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
     projectId: "YOUR_PROJECT_ID",
@@ -97,3 +97,22 @@ document.getElementById('apply-rank').addEventListener('click', function () {
         });
     }
 });
+const FireBaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID",
+};
+setTimeout(function () {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+}, 2000); // Change 2000 to a longer duration, e.g., 5000 for 5 seconds
+service cloud.firestore {
+    match /databases/{database}/documents {
+        match /{document=**} {
+            allow read, write: if true;
+        }
+    }
+}
